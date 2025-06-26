@@ -10,25 +10,6 @@ Uma API avançada para operações matemáticas usando FastAPI e a biblioteca pe
 - ✅ Multiplicar dois números
 - ✅ Dividir dois números (com proteção contra divisão por zero)
 
-### Operações Avançadas
-- ✅ Potenciação
-- ✅ Raiz quadrada
-- ✅ Fatorial
-- ✅ Porcentagem
-
-### Funções Trigonométricas
-- ✅ Seno (radianos e graus)
-- ✅ Cosseno (radianos e graus)
-- ✅ Tangente (radianos e graus)
-
-### Logaritmos
-- ✅ Logaritmo (base personalizada)
-- ✅ Logaritmo natural
-
-### Outras Operações
-- ✅ Valor absoluto
-- ✅ Constantes matemáticas (π, e, φ)
-
 ## 📚 Biblioteca Math_Lib
 
 Este projeto agora inclui uma biblioteca personalizada `math_lib` que fornece todas as operações matemáticas. A biblioteca é:
