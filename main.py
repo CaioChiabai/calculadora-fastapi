@@ -2,7 +2,11 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from calculadora import Calculadora
 
-app = FastAPI(title="Calculadora API", description="Uma API para operações básicas de calculadora")
+app = FastAPI(
+    title="Calculadora API",
+    description="Uma API para operações matemáticas básicas usando a biblioteca math_lib",
+    version="2.0.0"
+)
 
 class OperacaoRequest(BaseModel):
     a: float
@@ -13,8 +17,20 @@ calc = Calculadora()
 
 @app.get("/")
 async def root():
-    return {"message": "Bem-vindo à Calculadora API! Use os endpoints /somar, /subtrair, /dividir, /multiplicar"}
+    return {
+        "message": "Bem-vindo à Calculadora API 2.0!",
+        "versao": "2.0.0",
+        "biblioteca": "math_lib 1.0.0",
+        "endpoints_disponiveis": ["/somar", "/subtrair", "/dividir", "/multiplicar", "/info"],
+        "descricao": "API para operações matemáticas básicas"
+    }
 
+@app.get("/info")
+async def info():
+    """Informações sobre a calculadora e biblioteca"""
+    return calc.info()
+
+# Operações básicas
 @app.post("/somar")
 async def somar(operacao: OperacaoRequest):
     """Soma dois números"""
