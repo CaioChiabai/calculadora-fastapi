@@ -1,4 +1,4 @@
-# Calculadora FastAPI 2.0
+# Calculadora FastAPI
 
 Uma API avançada para operações matemáticas usando FastAPI e a biblioteca personalizada `math_lib`.
 
